@@ -1,0 +1,68 @@
+$textColorMain: #252525;
+$textColorSub: #656565;
+$textColorLight: #90a7d0;
+$textColorWhite: #ffffff;
+
+$primary-blue: #96F0FE;
+$primary-blue-80: #ABF3FE;
+$primary-blue-70: #B6F5FF;
+$primary-blue-50: #CAF7FE;
+$primary-yellow: #FFDC62;
+$primary-yellow-80: #FFE381;
+$primary-yellow-70: #FFEDB0;
+$primary-yellow-50: #FFE381;
+$secondary-grey: #2D3F58;
+$secondary-blue: #54758B;
+$secondary-red: #FEA996;
+
+$grey-style1:#252525;
+$grey-style2:#656565;
+$grey-style3:#C8C8C8;
+$grey-style4:#EEEBEB;
+$grey-style5:#ffffff;
+
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+  letter-spacing: 0.15em;
+  color: $textColorMain;
+}
+
+h2, %h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+  letter-spacing: 0.15em;
+  color: $textColorMain;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 125%;
+  color: $textColorMain;
+}
+
+@mixin title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 125%;
+  color: $textColorMain;
+}
+
+@mixin subtitle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 125%;
+  color: $textColorMain;
+}
+
+.img {
+  width: auto;
+}
