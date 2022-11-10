@@ -1,23 +1,26 @@
 .propose {
-  padding: 0 10%;
   border-bottom: 3px solid $secondary-grey;
-  .propose__title {
-    margin-top: 52px;
 
+  .section__title {
+    margin-top: 52px;
   }
+
   .propose__card-wrapper {
     margin: 72px auto 100px;
+    /* card layout */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     row-gap: 57px;
+    /* card body*/
     .propose__card {
       position: relative;
       width: 415px;
       height: 415px;
       border: 2px solid $textColorSub;
       border-radius: 20px;
-
+      display: grid;
+      /* card background*/
       &:nth-child(1) {
         justify-self: start;
         background-color: #F6FEFF;
@@ -33,12 +36,15 @@
         background-color: #FFF8F6;
         box-shadow: 13px 17px 0 0 $secondary-red, inset 11px 15px 0 0 #ffffff;
       }
+
       .card__title {
         position: relative;
         margin: 24px 28px 15px;
         padding: 16px 0 16px 20px;
+        align-self: center;
         border: 2px solid $textColorSub;
         border-radius: 12px;
+        /* font */
         @include title;
         text-align: start;
         line-height: 30px;
@@ -54,4 +60,14 @@
       }
     }
   }
+}
+
+.img--envy {
+  width: 188px;
+}
+.img--useless {
+  width: 176px;
+}
+.img--confuse {
+  width: 144px;
 }

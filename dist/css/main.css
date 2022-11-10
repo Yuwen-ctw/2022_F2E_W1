@@ -14,7 +14,7 @@ h1 {
   color: #252525;
 }
 
-h2, .banner .title__wrapper::after {
+h2, .design .design__title-wrapper::after, .banner .title__wrapper::after {
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -90,10 +90,11 @@ header .nav .nav__menu--login .menu__item {
 .banner .title__wrapper {
   position: relative;
   margin-top: 74px;
+  margin-bottom: 162px;
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 20%;
+  gap: 30%;
 }
 .banner .title__wrapper::after {
   content: "x";
@@ -119,7 +120,8 @@ header .nav .nav__menu--login .menu__item {
   background-color: #FFDC62;
 }
 .banner .marquee {
-  margin-top: 98px;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 4rem;
   display: flex;
@@ -141,18 +143,19 @@ header .nav .nav__menu--login .menu__item {
 }
 
 .propose {
-  padding: 0 10%;
   border-bottom: 3px solid #2D3F58;
 }
-.propose .propose__title {
+.propose .section__title {
   margin-top: 52px;
 }
 .propose .propose__card-wrapper {
   margin: 72px auto 100px;
+  /* card layout */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 57px;
+  /* card body*/
 }
 .propose .propose__card-wrapper .propose__card {
   position: relative;
@@ -160,6 +163,8 @@ header .nav .nav__menu--login .menu__item {
   height: 415px;
   border: 2px solid #656565;
   border-radius: 20px;
+  display: grid;
+  /* card background*/
 }
 .propose .propose__card-wrapper .propose__card:nth-child(1) {
   justify-self: start;
@@ -180,8 +185,10 @@ header .nav .nav__menu--login .menu__item {
   position: relative;
   margin: 24px 28px 15px;
   padding: 16px 0 16px 20px;
+  align-self: center;
   border: 2px solid #656565;
   border-radius: 12px;
+  /* font */
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -197,6 +204,79 @@ header .nav .nav__menu--login .menu__item {
   top: 50%;
   right: 20px;
   translate: 0 -50%;
+}
+
+.img--envy {
+  width: 188px;
+}
+
+.img--useless {
+  width: 176px;
+}
+
+.img--confuse {
+  width: 144px;
+}
+
+.design {
+  margin-top: 0px;
+  background-image: url(../images/design-gray.c4b89b.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 200px;
+}
+.design .section__title {
+  padding: 52px 0;
+  font-size: 36px;
+}
+.design .design__title-wrapper {
+  position: relative;
+  margin: 170px auto 112px;
+  display: flex;
+  justify-content: center;
+  gap: 30%;
+}
+.design .design__title-wrapper .design__title {
+  display: flex;
+  flex-direction: column;
+}
+.design .design__title-wrapper .design__title .title__name {
+  padding: 0 1rem;
+  position: relative;
+  letter-spacing: 0.1rem;
+}
+.design .design__title-wrapper .design__title .title__name::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 12px;
+  left: 50%;
+  bottom: 4px;
+  translate: -50% 0;
+}
+.design .design__title-wrapper .design__title .title__name--fe::after {
+  background-color: rgba(254, 169, 150, 0.631372549);
+}
+.design .design__title-wrapper .design__title .title__name--ui::after {
+  background-color: #FFDC62;
+}
+.design .design__title-wrapper .title__img {
+  margin-top: 71px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.design .design__title-wrapper::after {
+  content: "";
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAZCAYAAAAv3j5gAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFxSURBVHgBrdQ9boMwFABgG5I9kRAzA39je4MwdusNqpyguUE6dmtu0BwhPQHqDRiRkJAPAFJ2BPS9NEQEAfaDPMkJxj9fHD+bsU54nvfu+77FZoTrum9Q9u13eqfDvq7rTyivpmn+ZFl2ZsRABMYf4XFjGAbL8/z3DroiH9fqagrWQpq4YRxrtm3vOOdfPWOFrutBHMeC0ZF2bDX8XCwWJ4BETwerLMtQtmcSJCqK4sSbGk5WVVUIA6yezoMrU0ACIcSZt99SMVUEK7zbqopRkF5IBdM07QDtB6aIDEIKGKMgo9AEbBCRQgRsFMHQmSTwZliv1ys4Z5uRbi9pmoqRdvmKJNnVhPQG4Q9AlDD+IESKaROQCMoz9W7UqAhmV5IkERzagIJxKtJOYcrdyKciVIzPQSjYZY+gw24qgoG/WLJn3xcIJ2P/2URGFDBc0fa2R5ZlrZbLZQiPT1SkHZ2/sf9cIeY4zhG/2YxADOa5S/E/MmuRrYaZkV0AAAAASUVORK5CYII=);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
 /* CSS RESET */
@@ -250,4 +330,5 @@ main {
 main section {
   width: 100%;
   text-align: center;
+  padding: 0 10%;
 }

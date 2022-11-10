@@ -24,7 +24,7 @@ module.exports = {
         type: 'asset',
         parser: {
           dataUrlCondition: {
-            maxSize: 10 * 1024
+            maxSize: 5 * 1024
           }
         },
         generator: {
