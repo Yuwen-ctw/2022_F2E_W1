@@ -804,6 +804,82 @@ header .nav .nav__menu--login .menu__item {
   background-image: url(../images/award-water-hover.2c7b15.png);
 }
 
+.sponser {
+  border-bottom: 3px solid #2D3F58;
+}
+.sponser .section__title {
+  margin-top: 88px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  letter-spacing: 0.1em;
+}
+
+.sponser__blocks {
+  margin-top: 121px;
+  margin-bottom: 98px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15%;
+}
+.sponser__blocks .sponser__block {
+  position: relative;
+  border: 2px solid #2D3F58;
+  border-radius: 20px;
+}
+.sponser__blocks .sponser__block:nth-child(1) {
+  box-shadow: 6px 10px 0 0 #96F0FE;
+}
+.sponser__blocks .sponser__block:nth-child(1) .block__name {
+  box-shadow: 4px 4px 0 0 #96F0FE;
+}
+.sponser__blocks .sponser__block:nth-child(2) {
+  box-shadow: 6px 10px 0 0 #FFDC62;
+}
+.sponser__blocks .sponser__block:nth-child(2) .block__name {
+  box-shadow: 4px 4px 0 0 #FFDC62;
+}
+.sponser__blocks .sponser__block:nth-child(3) {
+  box-shadow: 6px 10px 0 0 #FEA996;
+}
+.sponser__blocks .sponser__block:nth-child(3) .block__name {
+  box-shadow: 4px 4px 0 0 #FEA996;
+}
+.sponser__blocks .sponser__block .block__name {
+  position: absolute;
+  top: -50px;
+  left: 25px;
+  padding: 11px 10px;
+  border: 3px solid #2D3F58;
+  background-color: #ffffff;
+  writing-mode: vertical-rl;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  letter-spacing: 0.4em;
+  translate: -3px;
+}
+.sponser__blocks .sponser__block .block__name--en {
+  translate: -100%;
+  padding: 12px 10px;
+  letter-spacing: 0.1em;
+}
+.sponser__blocks .sponser__block .block__img {
+  margin: 80px 0 30px;
+}
+
+.main__footer {
+  padding: 56px 0 64px;
+}
+.main__footer .footer__detail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
 /* CSS RESET */
 :root {
   font-size: 16px;
