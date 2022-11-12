@@ -16,25 +16,35 @@
     /* card body*/
     .propose__card {
       position: relative;
-      width: 26rem;
-      height: 26rem;
+      width: 95%;
+      height: 95%;
       border: 2px solid $textColorSub;
       border-radius: 20px;
       display: grid;
-      
+      justify-self: center;
+      @include for-sm-size {
+        width: 26rem;
+        height: 26rem;
+        &:nth-child(1) {
+          justify-self: start;
+        }
+        &:nth-child(2) {
+          justify-self: center;
+        }
+        &:nth-child(3) {
+          justify-self: end;
+        }
+      }
       /* individual card */
       &:nth-child(1) {
-        justify-self: start;
         background-color: #F6FEFF;
         box-shadow: 13px 17px 0 0 $primary-blue-80, inset 11px 15px 0 0 #ffffff;
       }
       &:nth-child(2) {
-        justify-self: center;
         background-color: #FFFCF2;
         box-shadow: 13px 17px 0 0 $primary-yellow-80, inset 11px 15px 0 0 #ffffff;
       }
       &:nth-child(3) {
-        justify-self: end;
         background-color: #FFF8F6;
         box-shadow: 13px 17px 0 0 $secondary-red, inset 11px 15px 0 0 #ffffff;
       }
@@ -61,13 +71,18 @@
     }
   }
 }
-
+.card__img-wrapper {
+  padding-bottom: 50px;
+  @include for-sm-size {
+    padding-bottom: unset;
+  }
+}
 .img--envy {
-  width: 188px;
+  max-width: 188px;
 }
 .img--useless {
-  width: 176px;
+  max-width: 176px;
 }
 .img--confuse {
-  width: 144px;
+  max-width: 144px;
 }

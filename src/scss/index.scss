@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
-@import './vars';
+@import './base';
 @import './header';
 @import './_main/index';
 
 /* CSS RESET */
 :root {
-  font-size: 16px;
+  font-size: 14px;
+  @include for-lg-size {
+    font-size: 16px;
+  }
 }
 
 * {
@@ -28,6 +31,7 @@ body {
 
 a {
   text-decoration: none;
+  color: $textColorMain;
 }
 
 ul,
@@ -35,15 +39,7 @@ li {
   list-style: none;
 }
 
-.main-logo {
-  margin: 100px auto 48px;
-  text-align: center;
-  .logo__img {
-    width: 100%;
-    min-width: 300px;
-    max-width: 657px;
-  }
-}
+
 
 
 

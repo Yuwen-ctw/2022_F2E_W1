@@ -20,14 +20,22 @@
   }
 
   .solution__postcard-wrapper {
-    margin-top: 40.5px;
-    padding: 62.5px 0 216.5px;
+    margin: 40.5px;
     border-top:2px solid $textColorSub;
     /* content layout*/
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     row-gap: 4.625rem;
+    padding: 50px 0 250px;
+    @include for-sm-size {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 62.5px 7% 216.5px;
+    }
+    @include for-lg-size {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 62.5px 0 216.5px;
+    }
   }
   .bg-img--bottom {
     position: absolute;
@@ -49,7 +57,6 @@
   transition: transform 1s;
   /* individual postion and color */
   &:nth-child(1) {
-    grid-column: 1 / 3;
     box-shadow: 4px 4px 5px $primary-blue;
     .line,
     .postcard__detail--topic::after {
@@ -60,13 +67,21 @@
       border: 2px solid $secondary-grey;
       color: $secondary-grey;
     }
-    &:hover {
-      transform: translateX(80%);
+    @include for-sm-size {
+      grid-column: 1 / 4;
+      &:hover {
+        transform: translateX(50%);
+      }
+    }
+    @include for-lg-size {
+      grid-column: 1 / 3;
+      &:hover {
+        transform: translateX(80%);
+      }
     }
   }
   &:nth-child(2) {
     grid-row: 2 / 3;
-    grid-column: 2 / 4;
     box-shadow: 4px 4px 5px $primary-yellow;
     .line,
     .postcard__detail--topic::after {
@@ -77,13 +92,21 @@
       border: 2px solid $secondary-grey;
       color: $secondary-grey;
     }
-    &:hover {
-      transform: translateX(-50%);
+    @include for-sm-size {
+      grid-column: 2 / 5;
+      &:hover {
+        transform: translateX(-50%);
+      }
+    }
+    @include for-lg-size {
+      grid-column: 2 / 4;
+      &:hover {
+        transform: translateX(-50%);
+      }
     }
   }
   &:nth-child(3) {
     grid-row: 3 / 4;
-    grid-column: 3 / 5;
     box-shadow: 4px 4px 5px $secondary-red;
     .line,
     .postcard__detail--topic::after {
@@ -94,8 +117,17 @@
       border: 2px solid $secondary-grey;
       color: $secondary-grey;
     }
-    &:hover {
-      transform: translateX(-50%);
+    @include for-sm-size {
+      grid-column: 1 / 4;
+      &:hover {
+        transform: translateX(50%);
+      }
+    }
+    @include for-lg-size {
+      grid-column: 3 / 5;
+      &:hover{
+        transform: translateX(-50%);
+      }
     }
   }
 }
@@ -142,7 +174,7 @@
     color: $textColorMain;
   }
   .postcard__detail--link {
-    grid-column: 2 / 3;
+    grid-column: 1 / 3;
     justify-self: end;
     padding: 0.5rem 1rem;
     border: 2px solid $secondary-grey;
@@ -176,7 +208,7 @@
     content: '';
     position: absolute;
     width: 100%;
-    height: 50px;
+    height: 45px;
     background-color: #ffffff;
     top: 0px;
     left: 0px;
@@ -193,7 +225,7 @@
     content: '';
     position: absolute;
     width: 100%;
-    height: 50px;
+    height: 35px;
     background-color: #ffffff;
     top: 0px;
     left: 0px;

@@ -21,6 +21,18 @@ $grey-style3:#C8C8C8;
 $grey-style4:#EEEBEB;
 $grey-style5:#ffffff;
 
+@mixin for-sm-size {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin for-lg-size {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
 @mixin set-font($fs:1rem, $fw:400, $lh: 150%, $ls: 0.1rem) {
   font-size: $fs;
   font-weight: $fw;

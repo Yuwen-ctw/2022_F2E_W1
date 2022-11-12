@@ -62,7 +62,10 @@
     border-top: 1px solid $secondary-blue;
     /* control content */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    @include for-sm-size {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }
 
@@ -72,8 +75,11 @@
   padding: 0 2.75rem;
   .flow__title {
     width: 100%;
-    padding: 0 2.75rem;
     position: relative;
+    @include for-lg-size{
+      padding: 0 2.75rem;
+      
+    }
     /* background */
     &::after {
       content: '';
@@ -115,14 +121,24 @@
   
   .item__time {
     @include set-font(1.25rem, 700, 150%, 0.05rem);
-    width: 200%;
     color: $secondary-grey;
+    width: 100%;
     /* modifier*/
     &--start {
-      translate: -50% -50%;
+      translate: -25% 0;
     }
     &--end {
-      translate: 0 -50%;
+      translate: 25% 0;
+    }
+
+    @include for-sm-size {
+      width: 200%;
+      &--start {
+        translate: -50% -50%;
+      }
+      &--end {
+        translate: 0 -50%;
+      }
     }
   }
 
@@ -140,17 +156,19 @@
       border-radius: 12px;
       background: rgba(255, 255, 255, 0.6);
       /* modifier */
-      &--gray-border {
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
-        background-image: linear-gradient(#98B7C4 50%, transparent 0%);
-        background-position: left 4px;
-        background-size: 2px 30px;
-        background-repeat: repeat-y;
-      }
-      &--fixRadiusR {
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
+      @include for-sm-size {
+        &--gray-border {
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+          background-image: linear-gradient(#98B7C4 50%, transparent 0%);
+          background-position: left 4px;
+          background-size: 2px 30px;
+          background-repeat: repeat-y;
+        }
+        &--fixRadiusR {
+          border-top-right-radius: 0px;
+          border-bottom-right-radius: 0px;
+        }
       }
 
       .action__title {

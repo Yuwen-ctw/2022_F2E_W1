@@ -2,32 +2,76 @@ header {
   position: relative;
   width: 100%;
   height: 80px;
-
+    input {
+      display: none;
+      &:checked + nav .nav__menu {
+        visibility: visible;
+      }
+    }
   .nav {
     padding: 0 52px;
     width: inherit;
     height: inherit;
     display: flex;
-    gap: 36px;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     position: absolute;
     left: 0px;
     top: 0px;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0px 5px 6px rgba(231, 231, 231, 0.25);
+    
+    @include for-lg-size {
+      flex-direction: row;
+      gap: 36px;
+      justify-content: space-between;
+    }
+    
+    .nav__logo {
+      position: absolute;
+      top: 50%;
+      left: 52px;
+      translate: 0 -50%;
+      @include for-lg-size {
+        all: unset;
+      }
+    }
+
     .nav__menu {
       display: flex;
+      padding: 20px 0;
+      position: relative;
+      top: 80px;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      background-color: white;
+      visibility: hidden;
+
+      @include for-lg-size {
+        all: unset;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        &.d-none {
+          display: flex;
+        }
+      }
     }
     .nav__menu--section {
-      margin-left: auto;
+      @include for-lg-size {
+        margin-left: auto;
+      }
 
       .menu__item {
-        &:nth-child(2) {
-          padding: 0 14px;
-          margin: 0 15px;
-          border-left: 1px solid $textColorMain;
-          border-right: 1px solid $textColorMain;
+        @include for-lg-size{
+          &:nth-child(2) {
+            padding: 0 14px;
+            margin: 0 15px;
+            border-left: 1px solid $textColorMain;
+            border-right: 1px solid $textColorMain;
+          }
         }
       }
     }
@@ -35,10 +79,62 @@ header {
     .nav__menu--login {
       gap: 20px;
       .menu__item {
+        text-align: center;
         padding: 8px 24px;
         background-color: $primary-yellow ;
         border-radius: 31px;
       }
+    }
+
+      .nav__toggle {
+      position: absolute;
+      display: block;
+      top: 20px;
+      right: 10%;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      span {
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: $textColorMain;
+        border-radius: 3px;
+        &::after,
+        &::before {
+          content: '';
+          width: 100%;
+          height: 5px;
+          position: absolute;
+          background-color: $textColorMain;
+          border-radius: 3px;
+        }
+        &::after {
+          bottom: 0px;
+        }
+        &::before {
+          top: 50%;
+          translate: 0 -50%;
+        }
+      }
+      @include for-lg-size {
+        display: none;
+      }
+    }
+  }
+}
+
+.main-logo {
+  margin: 75px auto 36px;
+  text-align: center;
+  .logo__img {
+    width: 80%;
+  }
+  @include for-lg-size{
+    margin: 100px auto 48px;
+    .logo__img {
+      min-width: 300px;
+      max-width: 657px;
     }
   }
 }

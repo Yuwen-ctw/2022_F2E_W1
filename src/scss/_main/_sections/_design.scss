@@ -15,7 +15,10 @@
     margin: 10.625rem auto 7rem;
     display: flex;
     justify-content: center;
-    gap: 30%;
+    gap: 5%;
+    @include for-sm-size {
+      gap: 30%;
+    }
     .design__title {
       display: flex;
       flex-direction: column;
@@ -45,20 +48,29 @@
     }
 
     .title__img {
-      margin-top: 4.4375rem;
+      margin-top: 2rem;
       flex-grow: 1;
       display: flex;
       justify-content: center;
       align-items: flex-end;
+      @include for-sm-size {
+        margin-top: 4.4375rem;
+      }
+
+      .img__link {
+        max-width: 100%;
+      }
     }
     /* x symbol */
     &::after {
       @include set-font(2rem, 700, 150% 0.15rem);
       content: '';
       background-image: url('/src/images/design-x.png');
+      background-position: center;
+      background-repeat: no-repeat;
       position: absolute;
-      width: 1.5625rem;
-      height: 1.5625rem;
+      width: 1.7rem;
+      height: 1.7rem;
       top: 50%;
       left: 50%;
       translate: -50% -50%;
