@@ -330,6 +330,7 @@ header .nav .nav__menu--login .menu__item {
   padding: 28px;
   border: 2px solid #252525;
   border-radius: 12px;
+  transition: transform 1s;
   /* individual postion and color */
 }
 .solution__postcard:nth-child(1) {
@@ -345,6 +346,9 @@ header .nav .nav__menu--login .menu__item {
   border: 2px solid #2D3F58;
   color: #2D3F58;
 }
+.solution__postcard:nth-child(1):hover {
+  transform: translateX(80%);
+}
 .solution__postcard:nth-child(2) {
   grid-row: 2/3;
   grid-column: 2/4;
@@ -359,6 +363,9 @@ header .nav .nav__menu--login .menu__item {
   border: 2px solid #2D3F58;
   color: #2D3F58;
 }
+.solution__postcard:nth-child(2):hover {
+  transform: translateX(-50%);
+}
 .solution__postcard:nth-child(3) {
   grid-row: 3/4;
   grid-column: 3/5;
@@ -372,6 +379,9 @@ header .nav .nav__menu--login .menu__item {
   background: #FEA996;
   border: 2px solid #2D3F58;
   color: #2D3F58;
+}
+.solution__postcard:nth-child(3):hover {
+  transform: translateX(-50%);
 }
 
 /* postcard content */
@@ -902,6 +912,7 @@ body {
   max-width: 1440px;
   min-height: 100vh;
   font-family: "Noto Sans TC";
+  overflow-x: hidden;
 }
 
 a {

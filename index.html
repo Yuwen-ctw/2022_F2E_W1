@@ -44,16 +44,18 @@
         <h2 class="title__name">UI Design</h2>
       </div>
       <div class="marquee">
-        <p class="marquee__words">You are more than what you think you are.</p>
-        <strong class="marquee__words marquee__words--f2e">THE F2E</strong>
-        <p class="marquee__words">You are more than what you think you are.</p>
+          <p class="marquee__words">You are more than what you think you are.</p>
+          <strong class="marquee__words marquee__words--f2e">THE F2E</strong>
+          <p class="marquee__words">You are more than what you think you are.</p>
+          <strong class="marquee__words marquee__words--f2e">THE F2E</strong>
+          <p class="marquee__words">You are more than what you think you are.</p>
       </div>
     </section>
     <!-- propose -->
     <section class="propose">
       <h1 class="section__title">你是否也有以下困擾？</h1>
       <div class="propose__card-wrapper">
-        <div class="propose__card">
+        <div class="propose__card propose__card--envy">
           <div class="card__title">羨慕別人的酷酷網頁動畫？
             <span class="card__icon">
                 <img src="./src/images/propose-search.png" alt="search-icon">
@@ -63,7 +65,7 @@
             <img class="img img--envy" src="./src/images/propose-envy.png" alt="envy">
           </div>
         </div>
-        <div class="propose__card">
+        <div class="propose__card propose__card--useless">
           <div class="card__title">滿足不了同事的許願？
             <span class="card__icon">
               <img src="./src/images/propose-search.png" alt="search-icon">
@@ -73,7 +75,7 @@
             <img class="img img--useless" src="./src/images/propose-useless.png" alt="envy">
           </div>
         </div>
-        <div class="propose__card">
+        <div class="propose__card propose__card--confuse">
           <div class="card__title">動畫技能數太雜無法下手？
             <span class="card__icon">
                 <img src="./src/images/propose-search.png" alt="search-icon">
@@ -110,7 +112,7 @@
       <p class="solution__description">各路廠商強強聯手</p>
       <p class="solution__description">共同設計出接地氣的網頁互動挑戰關卡</p>
       <div class="solution__postcard-wrapper">
-        <div class="solution__postcard">
+        <div class="solution__postcard solution__postcard--w1">
         <span class="line line--right"></span>
         <span class="line line--left"></span>
           <div class="postcard__title-wrapper">
@@ -123,7 +125,7 @@
             <a href="/" class="postcard__detail--link">查看關卡細節</a>
           </div>
         </div>
-        <div class="solution__postcard">
+        <div class="solution__postcard solution__postcard--w2">
           <span class="line line--right"></span>
           <span class="line line--left"></span>
           <div class="postcard__title-wrapper">
@@ -136,7 +138,7 @@
             <a href="/" class="postcard__detail--link">查看關卡細節</a>
           </div>
         </div>
-        <div class="solution__postcard">
+        <div class="solution__postcard solution__postcard--w3">
           <span class="line line--right"></span>
           <span class="line line--left"></span>
           <div class="postcard__title-wrapper">
@@ -156,26 +158,26 @@
     <section class="schedule">
       <h1 class="section__title">挑戰流程</h1>
       <div class="schedule__flow-wrapper">
-        <div class="schedule__flow">
+        <div class="schedule__flow schedule__flow--sign">
           <h3 class="flow__title">Sign up | 報名期間</h3>
           <p class="flow__date">10/3(四) 11:00</p>
           <span class="flow__wave">~</span>
           <p class="flow__date">11/6(日) 23:59</p>
           <p class="flow__hint"># 截止前可修改報名組別</p>
         </div>
-        <div class="schedule__flow">
+        <div class="schedule__flow schedule__flow--start">
           <h3 class="flow__title">Start ! | 開賽時間</h3>
           <p class="flow__date">10/31(一) UI、團體組開賽</p>
           <p class="flow__date">11/7(一) 前端組開賽</p>
         </div>
-        <div class="schedule__flow">
+        <div class="schedule__flow schedule__flow--upload">
           <h3 class="flow__title">Upload | 登錄作品</h3>
           <p class="flow__date">10/31(一) 中午12:00</p>
           <span class="flow__wave">~</span>
           <p class="flow__date">11/28(一) 中午12:00</p>
           <p class="flow__hint"># 依賽程登錄作品</p>
         </div>
-        <div class="schedule__flow">
+        <div class="schedule__flow schedule__flow--stream">
           <h3 class="flow__title">Stream | 線上直播</h3>
           <p class="flow__date">11/3 ~ 11/24 (每週四)</p>
           <p class="flow__hint"># 主題豐厚獎金等著你！</p>
@@ -304,6 +306,10 @@
       </p>
     </div>
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CustomEase.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
   <script src="./dist/bundle.js"></script>
 </body>
 </html>
