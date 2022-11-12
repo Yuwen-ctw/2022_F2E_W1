@@ -2,25 +2,27 @@
   border-bottom: 3px solid $secondary-grey;
 
   .section__title {
-    margin-top: 52px;
+    margin-top: 3.5rem;
   }
 
   .propose__card-wrapper {
-    margin: 72px auto 100px;
+    margin: 4.5rem auto 6.25rem;
     /* card layout */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    row-gap: 57px;
+    row-gap: 3.5rem;
+
     /* card body*/
     .propose__card {
       position: relative;
-      width: 415px;
-      height: 415px;
+      width: 26rem;
+      height: 26rem;
       border: 2px solid $textColorSub;
       border-radius: 20px;
       display: grid;
-      /* card background*/
+      
+      /* individual card */
       &:nth-child(1) {
         justify-self: start;
         background-color: #F6FEFF;
@@ -39,22 +41,20 @@
 
       .card__title {
         position: relative;
-        margin: 24px 28px 15px;
-        padding: 16px 0 16px 20px;
+        margin: 1.5rem 1.75rem 0.9375rem;
+        padding: 1rem 0 1rem 1.25rem;
         align-self: center;
         border: 2px solid $textColorSub;
         border-radius: 12px;
         /* font */
-        @include title;
-        text-align: start;
-        line-height: 30px;
-        letter-spacing: 0.15rem;
+        @include set-font(1.25rem, 500, 150% 0.15rem);
         color: $textColorSub;
+        text-align: start;
 
         .card__icon {
           position: absolute;
           top: 50%;
-          right: 20px;
+          right: 1.25rem;
           translate: 0 -50%;
         }
       }

@@ -10,30 +10,28 @@
     height: 232px;
   }
   .section__title {
-    padding-top: 52px;
-    padding-bottom: 151px;
-    font-size: 36px;
+    padding-top: 3.25rem;
+    padding-bottom: 9.43rem;
   }
+
   .solution__description {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 42px;
-    letter-spacing: 0.1em;
+    @include set-font(1.5rem, 700, 42px, 0.1rem);
     color: $textColorSub;
   }
+
   .solution__postcard-wrapper {
     margin-top: 40.5px;
-    padding-top: 62.5px;
-    padding-bottom: 216.5px;
+    padding: 62.5px 0 216.5px;
     border-top:2px solid $textColorSub;
+    /* content layout*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    row-gap: 74px;
+    row-gap: 4.625rem;
   }
   .bg-img--bottom {
-    z-index: -1;
     position: absolute;
+    z-index: -1;
     bottom: 0px;
     left: 0px;
     width: 100%;
@@ -45,7 +43,7 @@
 .solution__postcard {
   position: relative;
   width: 95%;
-  padding: 28px;
+  padding: 1.75rem;
   border: 2px solid $textColorMain;
   border-radius: 12px;
   transition: transform 1s;
@@ -105,72 +103,61 @@
 /* postcard content */
 .postcard__title-wrapper {
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
   border-bottom: 1px solid #000000;
   text-align: start;
   .postcard__title--week {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 0.1em;
+    @include set-font(1.25rem, 400);
   }
   .postcard__title--name {
-    line-height: 36px;
-    letter-spacing: 0.1rem;
+    @include set-font(1.5rem, 700);
   }
 }
 
 .postcard__detail-wrapper {
-  padding-top: 20px;
+  padding-top: 1.25rem;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto;
-  row-gap: 21px;
+  row-gap: 1.25rem;
   
   .postcard__detail--topic {
-    padding:0 8px;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 1.25rem;
+    padding:0 0.5rem;
     text-align: start;
-    letter-spacing: 0.1em;
     position: relative;
     &::after {
       content: '';
       position: absolute;
       z-index: -1;
       width: 100%;
-      height: 8px;
+      height: 0.5rem;
       left: 50%;
-      bottom: 4px;
+      bottom: 0.25rem;
       translate: -50% 0;
     }
   }
   .postcard__detail--organizer {
-    font-size: 16px;
-    line-height: 24px;
     text-align: end;
-    letter-spacing: 0.1em;
     color: $textColorMain;
   }
   .postcard__detail--link {
     grid-column: 2 / 3;
     justify-self: end;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     border: 2px solid $secondary-grey;
-    background: $secondary-grey;
-    color: #FFFFFF;
     border-radius: 40px;
-    text-align: end;
+    color: #FFFFFF;
     font-weight: 500;
-    line-height: 24px;
     text-align: center;
-    letter-spacing: 0.1em;
+    background: $secondary-grey;
     transition: background 0.3s, color 0.3s;
   }
 }
 
 /* line */
 .line {
+  /* create line */
   display: inline-block;
   position: absolute;
   width: 150px;
@@ -180,10 +167,12 @@
   rotate: 45deg;
 }
 .line--right {
+  /* adjust position */
   top: -21px;
   right: 0px;
   translate: 68px 0;
   &::after {
+    /* create cover */
     content: '';
     position: absolute;
     width: 100%;
@@ -195,10 +184,12 @@
   }
 }
 .line--left {
+  /* adjust position */
   left: 0px;
   bottom: 75px;
   translate: -24px 0;
   &::after {
+    /* create cover */
     content: '';
     position: absolute;
     width: 100%;
