@@ -1,8 +1,30 @@
 import './scss/index.scss'
-
+import _throttle from '../node_modules/lodash/throttle'
 gsap.registerPlugin(ScrollTrigger, TextPlugin, CustomEase)
 // banner section
 gsap.to('.marquee__words', {x:-628, duration: 6.28, repeat: -1, ease: 'none'})
+
+const throttleLight = _throttle(lightTrigger,300)
+function lightTrigger(self) {
+  const lightShake = gsap.timeline()
+  if (self.direction !== 1) return
+  if (self.isActive !== true) return
+  lightShake.to('.img--light', {
+    keyframes: [
+      {xPercent: -56, rotateY: -9, duration: 0.13, },
+      {xPercent: -45, rotateY: 7, duration: 0.24},
+      {xPercent: -53, rotateY: -5, duration: 0.26},
+      {xPercent: -48, rotateY: 3, duration: 0.24},
+      {xPercent: -50, rotateY: 0, duration:0.13}
+    ],duration: 0.5,
+  })
+}
+
+ScrollTrigger.create({
+  trigger: 'body',
+  end: '12% 0%',
+  onUpdate: throttleLight,
+})
 
 // propose section
 function proposeCardTrigger(selector, direction) {

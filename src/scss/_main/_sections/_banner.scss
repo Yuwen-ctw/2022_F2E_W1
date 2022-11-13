@@ -10,17 +10,18 @@
     padding: 0 25%;
   }
   .img-wrapper {
+    padding: 0 5%;
     width:100%;
     position: relative;
     .img--tv {
-      width: 100%;
+      width: 110%;
     }
     .img--light {
       width:20%;
       max-width: 66px;
       position: absolute;
       left: -1rem;
-      translate: -100% 0;
+      translate: -50% 0;
     }
   }
 

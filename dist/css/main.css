@@ -182,18 +182,19 @@ header .nav .nav__toggle span::before {
   padding: 0 25%;
 }
 .banner .img-wrapper {
+  padding: 0 5%;
   width: 100%;
   position: relative;
 }
 .banner .img-wrapper .img--tv {
-  width: 100%;
+  width: 110%;
 }
 .banner .img-wrapper .img--light {
   width: 20%;
   max-width: 66px;
   position: absolute;
   left: -1rem;
-  translate: -100% 0;
+  translate: -50% 0;
 }
 .banner .title__wrapper {
   position: relative;
